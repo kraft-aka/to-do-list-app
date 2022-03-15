@@ -1,42 +1,32 @@
-// get a value of the input
+let buttonAdd = $('#button');
 
-let inputValue = $('#input').val();
-
-
-/*$('#input').each(function (i) {
-    let inputValue = $(this).val();
-    if (inputValue.lenght < 1){
-        alert('Please, add an item');
-    }
-})*/
+//buttonAdd.on('click', function() {
+ // alert('Item is added');
+//});
 
 
-// select a list element
 
-
-$('#list').append('<li>' + $('#input').val() + '</li>');
+// add item to a list
+function newItem() {
+    let inputValue = $('#input[name=ListItem]').val();
+        if (!inputValue) {
+            alert('Please, enter an item!');
+    } else {
+        $('#list').append('<li>'+ inputValue +'</li>');
+    };   
+}
 
 
 // crossing out list items
 
-$('#list').on('click', function() {
-    $('#list').addClass('strike');
+$('').click(function() {
+    $('li').addClass('strike');
 });
 
 
-
-// adding an item to list
-
+// delete an item
 
 
-// function
-function newItem() {
-    let buttonAdd = $('#button');
-
-    buttonAdd.on('click', function() {
-        $('#list').append($('#list').val());
-    });
-}
 
 
 
