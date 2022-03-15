@@ -1,4 +1,10 @@
 let buttonAdd = $('#button');
+let deleteButton = (document.createTextNode('X'));
+
+
+
+$('.container').append(deleteButton);
+
 
 //buttonAdd.on('click', function() {
  // alert('Item is added');
@@ -19,12 +25,20 @@ function newItem() {
 
 // crossing out list items
 
-$('').click(function() {
-    $('li').addClass('strike');
+$('ol').on('click','li', function() {
+      $(this).toggleClass('strike');
 });
 
 
 // delete an item
+
+deleteButton.click(function() {
+   $(this).addClass('delete');
+})
+
+
+
+
 
 
 
