@@ -28,6 +28,18 @@ $(function() {
 });
 
 
+// focus to change background color of input 
+$('input').focus(function () {
+    $(this).css('background', '#fdeff4');
+});
+
+
+// blur the input back to white
+$('input').blur(function () {
+    $(this).css('background', 'white');
+});
+
+
 
 
 
