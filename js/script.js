@@ -1,16 +1,3 @@
-let buttonAdd = $('#button');
-let deleteButton = (document.createTextNode('X'));
-
-
-
-$('.container').append(deleteButton);
-
-
-//buttonAdd.on('click', function() {
- // alert('Item is added');
-//});
-
-
 
 // add item to a list
 function newItem() {
@@ -24,17 +11,21 @@ function newItem() {
 
 
 // crossing out list items
-
 $('ol').on('click','li', function() {
       $(this).toggleClass('strike');
 });
 
 
 // delete an item
+$('ol').on('dblclick','li', function() {
+   $(this).toggleClass('delete');
+});
 
-deleteButton.click(function() {
-   $(this).addClass('delete');
-})
+
+// function to move items of the list
+$(function() {
+    $('ol').sortable();
+});
 
 
 
